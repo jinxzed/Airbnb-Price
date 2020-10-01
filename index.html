@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome!!! Airbnb New Listing Price Suggestion</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+	<div class='logo_head'>
+		<img src='C:\Users\Gayatri\Desktop\Airbnb App\airbnb.png' width=50% height=300px>
+		<!--<form action="{{url_for('predict')}}" method='post'>
+			<input type='text' name='contact' placeholder="Enter your contact" required="required">
+		</form>
+		-->
+	</div>
+	
+	<div class='login'>
+		<h1>Predict Listing Price for your Property</h1>
+		<form action="{{url_for('predict')}}" method='post'>
+			<input type='text' name='experience' placeholder="Enter experience offered" required="required">
+			<input type='text' name='room_type' placeholder="Enter room type" required="required">
+			<input type='text' name='accommodates' placeholder="Enter accommodates" required="required">
+			<input type='text' name='bathrooms' placeholder="Enter bathrooms" required="required">
+			<br>
+			<br>
+			<input type='text' name='bedrooms' placeholder="Enter bedrooms" required="required">
+			<input type='text' name='beds' placeholder="Enter beds" required="required">
+			<input type='text' name='bed_type' placeholder="Enter bed type" required="required">
+			<input type='text' name='security' placeholder="Enter security deposit" required="required">
+			<br>
+			<br>
+			<input type='text' name='clean_fee' placeholder="Enter cleaning fee" required="required">
+			<input type='text' name='guests' placeholder="Enter guests included" required="required">
+			<input type='text' name='extras' placeholder="Enter extra people price" required="required">
+			<input type='text' name='minimum' placeholder="Enter minimum nights" required="required">
+			<br>
+			<br>
+			<input type='text' name='maximum' placeholder="Enter maximum nights" required="required">
+			<input type='text' name='availability_30' placeholder="Enter month availability" required="required">
+			<input type='text' name='availability_90' placeholder="Enter 3 month availability" required="required">
+			<input type='text' name='availability_365' placeholder="Enter year availability" required="required">
+			<br>
+			<br>
+			<input type='text' name='license' placeholder="Enter if license required" required="required">
+			<input type='text' name='instant' placeholder="Enter if availabile for instant booking" required="required">
+			<input type='text' name='business' placeholder="Enter if property business ready" required="required">
+			<input type='text' name='premium' placeholder="Enter the premium amenities" required="required">
+			<br>
+			<br>
+			<input type='text' name='property' placeholder="Enter the property type" required="required">
+			<input type='text' name='cancellation' placeholder="Enter cancellation policy" required="required">
+			<input type='text' name='foreign' placeholder="Are you from United Kingdom" required="required">
+			<input type='text' name='neighbor' placeholder="Enter your neighborhood" required="required">
+			
+			<button type="submit" class="btn btn-primary btn-block btn-large"> Predict the Price </button>
+		</form>
+	
+		<br>
+		<br>
+		{{prediction_text}}
+	</div>
+
+</body>
+</html>
